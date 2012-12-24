@@ -323,16 +323,34 @@ class QServerUtil {
 	}
 
 	public function addUser($username, $password, $email) {
-		$this->command('AuthServ', 'oregister '.$username.' '.$password.' *@*');
-		$this->command('AuthServ', 'oset *'.$username.' email '.$email);
+		$data = array();
+		$data[] = $this->command('AuthServ', 'oregister '.$username.' '.$password.' *@*');
+		$data[] = $this->command('AuthServ', 'oset *'.$username.' email '.$email);
+
+		return $data;
 	}
 	
 	public function deleteUser($username) {
-		$this->command('AuthServ', 'ounregister *'.$username.' FORCE');
+		return $this->command('AuthServ', 'ounregister *'.$username.' FORCE');
 	}
 	
 	public function resetPassword($username, $password) {
-		$this->command('AuthServ', 'oset *'.$username.' pass '.$password);
+		$data = $this->command('AuthServ', 'oset *'.$username.' pass '.$password);
+		$exp=explode("\n",$data);
+		for($i=0;$i<count($exp);$i++) {
+			$expb=explode(":",$exp[$i],2);
+			if(array_key_exists(1, $expb)) {
+				if(strpos($expb[1],"has not been")!==false) {
+					$int = rand(1,100);
+					$mail = 'dummy'.$int.'@irc.local';
+					return $this->adduser($username,$password,$mail);
+				}
+				if(strpos($expb[1],"PASSWORD")!==false) {
+					return true;
+				}
+			}
+		}
+		return false;
 	}
 	
 	public function renameAccount($username, $newUsername) {
