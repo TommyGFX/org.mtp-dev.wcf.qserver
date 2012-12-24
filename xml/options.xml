@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<data xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com/XSD/options.xsd">
+	<import>
+		<categories>
+			<category name="general.qserver">
+				<parent>general</parent>
+			</category>
+		</categories>
+		<options>
+			<option name="qserver_username">
+				<categoryname>general.qserver</categoryname>
+				<optiontype>text</optiontype>
+				<defaultvalue><![CDATA[qserver]]></defaultvalue>
+				<showorder>1</showorder>
+			</option>
+			<option name="qserver_authpass">
+				<categoryname>general.qserver</categoryname>
+				<optiontype>password</optiontype>
+				<defaultvalue><![CDATA[qserver-2012]]></defaultvalue>
+				<showorder>2</showorder>
+			</option>
+			<option name="qserver_pass">
+				<categoryname>general.qserver</categoryname>
+				<optiontype>password</optiontype>
+				<defaultvalue><![CDATA[yX)DbenBInNgljsB]]></defaultvalue>
+				<showorder>3</showorder>
+			</option>
+			<option name="qserver_server">
+				<categoryname>general.qserver</categoryname>
+				<optiontype>text</optiontype>
+				<defaultvalue><![CDATA[127.0.0.1]]></defaultvalue>
+				<showorder>4</showorder>
+			</option>
+			<option name="qserver_port">
+				<categoryname>general.qserver</categoryname>
+				<optiontype>integer</optiontype>
+				<defaultvalue><![CDATA[7702]]></defaultvalue>
+				<showorder>5</showorder>
+			</option>
+		</options>
+	</import>
+</data>

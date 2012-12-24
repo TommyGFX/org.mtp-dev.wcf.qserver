@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<language xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/language.xsd" languagecode="en">
+	<category name="wcf.acp.option">
+		<item name="wcf.acp.option.category.general.qserver"><![CDATA[QSERVER]]></item>
+		<item name="wcf.acp.option.category.general.qserver.description"><![CDATA[]]></item>
+		<item name="wcf.acp.option.qserver_username"><![CDATA[Username]]></item>
+		<item name="wcf.acp.option.qserver_username.description"><![CDATA[Please enter the AuthServ Username]]></item>
+		<item name="wcf.acp.option.qserver_authpass"><![CDATA[AuthServ Password]]></item>
+		<item name="wcf.acp.option.qserver_authpass.description"><![CDATA[Please enter the AuthServ Password]]></item>
+		<item name="wcf.acp.option.qserver_pass"><![CDATA[Serverpassword]]></item>
+		<item name="wcf.acp.option.qserver_pass.description"><![CDATA[Please enter the serverpassword]]></item>
+		<item name="wcf.acp.option.qserver_server"><![CDATA[Server]]></item>
+		<item name="wcf.acp.option.qserver_server.description"><![CDATA[Please enter the specified server]]></item>
+		<item name="wcf.acp.option.qserver_port"><![CDATA[Port]]></item>
+		<item name="wcf.acp.option.qserver_port.description"><![CDATA[Please enter the specified port]]></item>
+	</category>
+</language>
