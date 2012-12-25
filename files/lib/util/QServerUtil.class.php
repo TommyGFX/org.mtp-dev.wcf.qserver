@@ -354,15 +354,15 @@ class QServerUtil {
 	}
 	
 	public function renameAccount($username, $newUsername) {
-		$this->command('AuthServ', 'rename *'.$username.' '.$newUsername);
+		return $this->command('AuthServ', 'rename *'.$username.' '.$newUsername);
 	}
 	
 	public function setEmail($username, $email) {
-		$this->command('AuthServ', 'oset *'.$username.' email '.$email);
+		return $this->command('AuthServ', 'oset *'.$username.' email '.$email);
 	}
 	
 	public function sendMessageToTarget($user, $target, $message) {
-		$this->command('OpServ', 'simul '.$user.' privmsg :'.$target.' '.$message);
+		return $this->command('OpServ', 'simul '.$user.' privmsg :'.$target.' '.$message);
 	}
 	
 	public function sendNoticeToTarget($user, $target, $message) {
